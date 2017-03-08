@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: False
   vars:
-    key_name: Tower
+    keypair: Tower
     instance_type: t2.micro
     security_group: sg-6c37a60b
     image: ami-2cade64c
