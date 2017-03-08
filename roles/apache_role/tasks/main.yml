@@ -1,4 +1,8 @@
 ---
+- yum:
+  name: httpd mod-ssl
+  state: present
+    
 - service:
     name: http
     state: started
