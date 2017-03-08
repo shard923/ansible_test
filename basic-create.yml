@@ -7,7 +7,7 @@
   - name: Instance
     local_action:
       module: ec2
-      keyname: Tower
+      key_name: Tower
       instance_type: t2_micro
       image: ami-2cade64c
       vpc_subnet_id: subnet-cfa6d3ab
