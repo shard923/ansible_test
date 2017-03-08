@@ -1,9 +1,11 @@
 ---
-- yum:
-  name: httpd mod-ssl
-  state: present
+- name: Install Apache and mod-ssl
+  yum:
+    name: httpd mod-ssl
+    state: present
     
-- service:
-    name: http
+- name: Start HTTPD24 service:
+  service:  
+    name: httpd
     state: started
     enabled: yes
