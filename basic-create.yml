@@ -8,7 +8,7 @@
     local_action:
       module: ec2
       key_name: Tower
-      instance_type: t2_micro
+      instance_type: t2.micro
       image: ami-2cade64c
       vpc_subnet_id: subnet-cfa6d3ab
       wait: yes
