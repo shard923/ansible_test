@@ -4,7 +4,7 @@
     name: httpd mod-ssl
     state: present
     
-- name: Start HTTPD24 service:
+- name: Start apache
   service:  
     name: httpd
     state: started
