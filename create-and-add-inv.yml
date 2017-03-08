@@ -5,7 +5,7 @@
     keypair: Tower
     instance_type: t2.micro
     security_group: sg-6c37a60b
-    image: ami-2cade64c
+    image: ami-33f18053
     region: us-west-1
   tasks:
     - name: Launch instance
