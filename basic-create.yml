@@ -1,7 +1,7 @@
 ---
 - name: Launch EC2 Instance
   hosts: localhost
-  conneciton: local
+  connection: local
   gather_facts: false
   tasks:
   - name: Instance
