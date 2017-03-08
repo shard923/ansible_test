@@ -1,5 +1,6 @@
 ---
 - hosts: local
+  tasks:
   - name: Launch EC2 Instance
     ec2:
       keyname: Tower
