@@ -1,5 +1,5 @@
 ---
 - service:
-    name: httpd24
+    name: httpd
     state: started
     enabled: yes
