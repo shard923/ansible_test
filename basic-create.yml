@@ -1,8 +1,12 @@
 ---
-- hosts: local
+- name: Launch EC2 Instance
+  hosts: localhost
+  conneciton: local
+  gather_facts: false
   tasks:
-  - name: Launch EC2 Instance
-    ec2:
+  - name: Instance
+    local_action:
+      module: ec2
       keyname: Tower
       instance_type: t2_micro
       image: ami-2cade64c
@@ -11,8 +15,3 @@
       wait_timeout: 500
       assign_public_ip: yes
       region: us-west-1
-  - name: Start and Enable Apache service
-    service: 
-      name: httpd
-      state: started
-      enabled: yes
