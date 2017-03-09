@@ -8,4 +8,5 @@
       ec2:
         state: 'absent'
         region: us-west-1
-        instance_tags: '{"role: "{{ role }}"}'
+        instance_tags: 
+          role: "{{ role }}"
