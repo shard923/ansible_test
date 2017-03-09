@@ -4,7 +4,7 @@
   connection: local
   gather_facts: false
   tasks:
-    - name: Output stuff about the tag_role_apache group instances
+
     - debug: var=hostvars[inventory_hostname]
     - debug: msg="{{ hostvars[inventory_hostname]['ec2_id'] }}"
  #   - name: Terminate instances that were previously launched
