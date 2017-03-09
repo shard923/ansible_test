@@ -4,12 +4,9 @@
   connection: local
   gather_facts: false
   tasks:
-
-    - debug: var=hostvars[inventory_hostname]
-    - debug: msg="{{ hostvars[inventory_hostname]['ec2_id'] }}"
- #   - name: Terminate instances that were previously launched
- #     ec2:
- #       state: 'absent'
- #       region: us-west-1
- #       instance_id: "{{ item }}"
- #     with_items: hostvars[inventory_hostname]['ansible_ec2_instance_id']    
+   - name: Terminate instances that were previously launched
+     ec2:
+       state: 'absent'
+       region: us-west-1
+       instance_id: "{{ item }}"
+     with_items: hostvars[inventory_hostname]['ec2_id']    
