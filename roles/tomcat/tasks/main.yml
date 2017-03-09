@@ -12,6 +12,7 @@
 - name: Unpack tomcat 8
   unarchive:
     src: /tmp/apache-tomcat-8.0.41.tar.gz
+    copy: no
     dest: /tmp
     
 - name: Start tomcat 8
