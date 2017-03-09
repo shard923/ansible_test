@@ -1,8 +1,23 @@
 ---
-- name: Install tomcat8
+- name: Install JRE 8
   yum:
-    name: "{{ item }}"
+    name: java-1.8.0-openjdk
     state: present
- with_items:
-   - java-1.8.0-openjdk
-   - tomcat8
+
+- name: Download tomcat8
+  get_url:
+    url: http://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-8/v8.0.41/bin/apache-tomcat-8.0.41.tar.gz
+    dest: /tmp/apache-tomcat-8.0.41.tar.gz
+ 
+- name: Unpack tomcat 8
+  unarchive:
+    src: /tmp/apache-tomcat-8.0.41.tar.gz
+    dest: /tmp
+    
+- name: Start tomcat 8
+  command: /tmp/apache-tomcat-8.0.41/bin/startup.sh
+    
+- name: Download sample war
+  get_url:
+    url: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
+    dest: /tmp/apache-tomcat-8.0.41/webapps/sample.war
