@@ -1,0 +1,11 @@
+---
+- name: Install tomcat8
+  yum:
+    name: tomcat8
+    state: present
+    
+- name: Start tomcat
+  service:  
+    name: tomcat
+    state: started
+    enabled: yes
