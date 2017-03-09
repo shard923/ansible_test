@@ -1,11 +1,8 @@
 ---
 - name: Install tomcat8
   yum:
-    name: tomcat8
+    name: "{{ item }}"
     state: present
-    
-- name: Start tomcat
-  service:  
-    name: tomcat
-    state: started
-    enabled: yes
+ with_items:
+   - java-1.8.0-openjdk
+   - tomcat8
