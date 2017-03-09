@@ -8,5 +8,4 @@
      ec2:
        state: 'absent'
        region: us-west-1
-       instance_id: "{{ item }}"
-     with_items: hostvars[inventory_hostname]['ec2_id']    
+       instance_id: "{{ ec2_id }}"
