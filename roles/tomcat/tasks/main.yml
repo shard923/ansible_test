@@ -16,7 +16,7 @@
     dest: /tmp
     
 - name: Start tomcat 8
-  command: /tmp/apache-tomcat-8.0.41/bin/startup.sh
+  command: /tmp/apache-tomcat-8.0.41/bin/startup.sh &
     
 - name: Download sample war
   get_url:
