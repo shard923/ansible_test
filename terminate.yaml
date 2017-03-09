@@ -7,4 +7,5 @@
     - name: Terminate instances that were previously launched
       ec2:
         state: 'absent'
-        instance_ids: '{{ ec2.instance_ids }}'  
+        region: us-west-1
+        instance_tags: '{"role: "{{ role }}"}'
