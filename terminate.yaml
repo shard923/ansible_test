@@ -1,5 +1,5 @@
 ---
- name: Terminate EC2 Apache Instance
+- name: Terminate EC2 Apache Instance
   hosts: tag_role_apache
   connection: local
   gather_facts: false
@@ -9,4 +9,4 @@
         state: 'absent'
         region: us-west-1
         instance_id: "{{ item }}"
-      with_items: hostvars[inventory_hostname]['ensible_ec2_instance_id']    
+      with_items: hostvars[inventory_hostname]['ansible_ec2_instance_id']    
