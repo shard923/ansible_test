@@ -20,5 +20,5 @@
     
 - name: Download sample war
   get_url:
-    url: https://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
+    url: http://tomcat.apache.org/tomcat-8.0-doc/appdev/sample/sample.war
     dest: /tmp/apache-tomcat-8.0.41/webapps/sample.war
