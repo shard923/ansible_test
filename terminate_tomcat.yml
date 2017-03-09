@@ -1,0 +1,11 @@
+---
+- name: Terminate EC2 Tomcat Instance
+  hosts: tag_role_tomcat
+  connection: local
+  gather_facts: false
+  tasks:
+   - name: Terminate instances that were previously launched
+     ec2:
+       state: 'absent'
+       region: us-west-1
+instance_id: "{{ ec2_id }}"
